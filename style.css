@@ -1,0 +1,219 @@
+.menu-toggle {
+    display: none; /* Escondido por padrão */
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 30px;
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.navebar{
+    display: flex;
+    position: fixed;
+    height: 100vh;
+    width: 240px;
+    background-color: black;
+    border-radius: 0px 50px 50px 0px;
+}
+
+.navebar ul{
+    margin-top: 50px;
+    padding: 10px 20px; 
+}
+.navebar li{
+    height: 40px;
+    width: auto;
+    list-style: none;
+    margin: 40px 20px;
+}
+
+.navebar div{
+    display: flex;
+    gap: 20px;
+    
+}
+
+.navebar a{
+    text-decoration: none;
+}
+
+
+
+.navebar #title_nav{
+    font-family: "Roboto", serif;
+}
+.navebar span{
+    
+    align-content: center;
+    font-size: 20px;
+    color: aliceblue;
+
+
+}
+
+.main_navebar{
+    margin: 10px 20px;
+    height: 130px;
+    width: auto;
+    margin-bottom: 70px;
+    background-image: url();
+
+}
+
+
+.main_navebar ul{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    align-items: end;
+}
+
+.main_navebar span{
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 24px;
+    padding: 10px;
+    
+}
+
+.main_videogame{
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 17px;
+    height: auto;
+    width: auto;
+    border-radius: 40px 90px 40px 90px;
+    background-image: url(https://moradagames.com.br/img_site/bg.jpg);
+    box-shadow: 10px 10px 20px #fff;
+
+}
+.main_videogame h2{
+    margin-left: 20px;
+    font-weight: 500;
+    font-size: 30px;
+    font-family: "Roboto", sans-serif;
+}
+.main_videogamegrid{
+    margin: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    grid-row-gap: 2em;
+    
+
+}
+
+.main_videogamegrid div{
+    padding: 20px;
+    height: 100px;
+    width: 110px;
+    border-radius: 30px;
+    background-color: #622d2e;
+    text-align: center;
+    border-radius: 30px;
+    
+}
+
+.main_videogamegrid span{
+    display: block;
+    margin-top: 10px;
+    
+}
+
+.main_videogamegrid  span p{
+    font-weight: 500;
+    padding-top: 20px;
+    font-size: 15px;
+    font-family: "Montserrat", serif;
+    
+}
+
+.main_funcionamento{
+    display: grid;
+    margin-left: 20px;
+    margin-bottom: 40px;
+    grid-template-columns: 1fr 2fr;
+    grid-column-gap: 1em;
+    height: 290px;
+    
+
+}
+
+.main_foto_estabelecimento a{
+    height: 300px;
+    width: 500px;
+    
+    
+}
+
+.foto {
+    position: relative; 
+    display: inline-block; 
+    transition: filter 0.3s ease;
+    
+}
+
+.foto img {
+    width: 100%; 
+    height: 100%;
+    object-fit: cover; 
+    transition: filter 0.3s ease;
+    border-radius: 20px;
+}
+.foto::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0);
+    transition: background 0.3s ease;
+}
+.foto:hover img {
+    filter: blur(1px); 
+    cursor: pointer;
+}
+.foto:hover::after {
+    background: rgba(0, 0, 0, 0.3); 
+}
+.main_descricao{
+    align-content: center;
+    
+}
+#title_horario{
+    margin-top: 70px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 35px;
+    padding-bottom: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+    
+}
+
+.main_descricao li{
+    margin-left: 20px;
+    list-style: circle;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: "Montserrat" , serif;
+}
+
+
+.encerramento{
+    display: block;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background-color: black;
+    text-align: end;
+}
+

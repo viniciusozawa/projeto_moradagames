@@ -1,0 +1,31 @@
+@media (max-width: 768px) {
+    .navebar {
+        position: fixed;
+        top: 0;
+        left: -240px; /* Esconde o menu fora da tela */
+        height: 100vh;
+        width: 240px;
+        transition: transform 0.3s ease;
+    }
+
+    /* Quando o menu estiver ativo, ele aparece */
+    .navebar.active {
+        transform: translateX(240px);
+    }
+
+    main {
+        margin-left: 0; /* Sem margem no conteúdo quando o menu está fechado */
+    }
+
+    /* Mostrar o botão de menu em telas menores */
+    .menu-toggle {
+        display: block; /* Mostrar o botão */
+    }
+
+    
+    .main_videogamegrid{
+        grid-template-columns: 1fr 1fr;
+        grid-row-gap: 2em;
+    }
+
+}

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morada Games</title>
+
+    <link rel="stylesheet" href="style/reset.css">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="style/style_-cel.css">
+
+
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        body {
+            display: flex;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            width: 100%;
+            flex-direction: row;
+            gap: 30px;
+            position: relative;
+            color: #FFFF;
+            background: -webkit-linear-gradient(121deg, #6b4433, #622d2e, #54172f, #3d0634, #180238);
+            background: linear-gradient(121deg, #6b4433, #622d2e, #54172f, #3d0634, #180238);
+
+        }
+
+        header {
+            display: block;
+            position: fixed;
+            height: 100vh;
+            width: 240px;
+            transition: transform 0.3s ease;
+
+        }
+
+        main {
+            display: block;
+            overflow-y: auto;
+            height: 100vh;
+            width: auto;
+            box-sizing: border-box;
+            margin-left: 240px;
+            padding: 20px;
+            transition: margin-left 0.3s ease;
+
+        }
+
+        @media (max-width: 768px) {
+            
+
+            body,
+            html {
+                margin: 0;
+                padding: 0;
+                height: 100%;
+                width: 100%;
+                overflow-x: hidden;
+                
+            }
+
+            .navebar {
+                position: fixed;
+                top: 0;
+                left: -240px;
+                /* Esconde o menu fora da tela */
+                height: 100vh;
+                width: 240px;
+                transition: transform 0.3s ease;
+            }
+
+            /* Quando o menu estiver ativo, ele aparece */
+            .navebar.active {
+                transform: translateX(240px);
+            }
+
+            main {
+                margin-left: 0;
+                /* Sem margem no conteúdo quando o menu está fechado */
+            }
+
+            /* Mostrar o botão de menu em telas menores */
+            .menu-toggle {
+                display: block;
+                /* Mostrar o botão */
+            }
+
+            .main_videogame {
+                height: 90%;
+                padding: 15px;
+            }
+
+            .main_videogamegrid {
+                grid-template-columns: 1fr 1fr;
+                grid-row-gap: 2em;
+            }
+
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/360a0c3340.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <button id="menuToggle" class="menu-toggle">☰</button> <!-- Botão para abrir/fechar o menu -->
+    <header>
+        <nav>
+            <div class="navebar">
+                <ul>
+                    <li>
+                        <a href="index.html" target="_parent">
+                            <div>
+                                <span class="fa-solid fa-house"></span>
+                                <span id="title_nav">HOME</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div>
+                                <span class="fa-solid fa-city"></span>
+                                <span id="title_nav">QUEM SOMOS</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div>
+                                <span class="fa-solid fa-circle-info"></span>
+                                <span id="title_nv">FAQ</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div>
+                                <span class="fa-solid fa-store"></span>
+                                <span id="title_nav">PRODUTOS</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div>
+                                <span class="fa-solid fa-screwdriver-wrench"></span>
+                                <span id="title_nav">ASSISTÊNCIA TÉCNICA</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div>
+                                <span class="fa-solid fa-phone"></span>
+                                <span id="title_nav">CONTATO</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+
+
+
+
+
+
+            </div>
+
+
+        </nav>
+
+    </header>
+
+    <main>
+        <div class="main_navebar">
+            <ul>
+                <li>
+                    <a href=""><img src="https://moradagames.com.br/img_site/logo.png" alt="Moradagames_icon"></a>
+                </li>
+                <li>
+                    <span id="icon_form" class="fa-solid fa-phone"></span>
+                    <span id="title_nav">
+                        <p>(35) 3291-4213</p>
+                    </span>
+
+                </li>
+                <li>
+                    <span id="icon_form" class="fa-solid fa-phone"></span>
+                    <span id="title_nav">
+                        <p>(35) 98855-3750</p>
+                    </span>
+                </li>
+            </ul>
+
+        </div>
+
+
+        <div class="main_videogame">
+            <h2>Assistência em:</h2>
+
+            <div class="main_videogamegrid">
+                <div>
+                    <span>
+                        <img src="https://moradagames.com.br/img_site/ps1.png" alt="">
+                        <p>PlayStation 1</p>
+                    </span>
+                </div>
+                <div>
+                    <span>
+                        <img src="https://moradagames.com.br/img_site/game1.png" alt="">
+                        <p>PlayStation 2</p>
+                    </span>
+                </div>
+                <div>
+                    <span>
+                        <img src="https://moradagames.com.br/img_site/game2.png" alt="">
+                        <p>PlayStation 3</p>
+                    </span>
+                </div>
+                <div>
+                    <span>
+                        <img src="https://moradagames.com.br/img_site/PS4.png" alt="">
+                        <p>PlayStation 4</p>
+                    </span>
+                </div>
+                <div>
+                    <span>
+                        <img src="https://moradagames.com.br/img_site/game4.png" alt="">
+                        <p>Xbox 360</p>
+                    </span>
+                </div>
+                <div>
+                    <span>
+                        <img src="https://moradagames.com.br/img_site/xbox1.png" alt="">
+                        <p>Xbox One</p>
+                    </span>
+                </div>
+            </div>
+
+
+        </div>
+        <h2 id="title_horario">Horário de Funcionamento</h2>
+        <div class="main_funcionamento">
+            <div class="main_foto_estabelecimento">
+                <a class="foto" href="https://www.google.com/search?q=morada+gamess&oq=morada+games&gs_lcrp=EgZjaHJvbWUqBggAEEUYOzIGCAAQRRg7MhAIARAuGK8BGMcBGIAEGI4FMgYIAhBFGEAyCAgDEAAYFhgeMggIBBAAGBYYHjIGCAUQRRg8MgYIBhBFGDwyBggHEEUYPdIBCDQzMjVqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8" target="_blank" rel="noopener noreferrer">
+                    <img src="img/20240906_090158.jpg" alt="foto_estabelecimento_moradagames">
+
+                </a>
+            </div>
+
+            <div class="main_descricao">
+                <ul type="circle">
+                    <li>segunda-feira	09:00–12:00, 14:00–18:00</li>
+                    <li>terça-feira	09:00–12:00, 14:00–18:00</li>
+                    <li>quarta-feira	09:00–12:00, 14:00–18:00</li>
+                    <li>quinta-feira	09:00–12:00, 14:00–18:00</li>
+                    <li>sexta-feira	09:00–12:00, 14:00–18:00</li>
+                    <li>sábado	09:00–12:00</li>
+                    <li>domingo	Fechado</li>
+
+                    
+
+
+                </ul>
+
+            </div>
+
+
+        </div>
+
+
+        
+    </main>
+
+    <footer>
+        <div class="encerramento">
+            <p>Feito com intuito academico e estudo</p>
+        </div>
+
+    </footer>
+    <script>
+        // Selecionar o botão de menu e a navegação
+        const menuToggle = document.getElementById('menuToggle');
+        const navbar = document.querySelector('.navebar');
+
+        // Alternar a visibilidade do menu ao clicar no botão
+        menuToggle.addEventListener('click', () => {
+            navbar.classList.toggle('active'); // Alterna a classe 'active' para mostrar/ocultar o menu
+        });
+    </script>
+
+
+
+</body>
+
+</html>
