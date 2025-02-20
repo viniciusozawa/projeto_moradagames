@@ -29,13 +29,11 @@
 
     <style>
         body {
-            display: flex;
+
             margin: 0;
             padding: 0;
             height: 100vh;
             width: 100%;
-            flex-direction: row;
-            gap: 30px;
             position: relative;
             color: #FFFF;
             background: -webkit-linear-gradient(121deg, #6b4433, #622d2e, #54172f, #3d0634, #180238);
@@ -46,73 +44,24 @@
         header {
             display: block;
             position: fixed;
-            height: 100vh;
-            width: 240px;
+            height: auto;
+            width: 100vw;
             transition: transform 0.3s ease;
 
         }
 
         main {
             display: block;
-            overflow-y: auto;
-            height: 100vh;
+            padding: 40px;
+            overflow-y: scroll;
+            height: 100%;
             width: auto;
             box-sizing: border-box;
-            margin-left: 240px;
-            padding: 20px;
-            transition: margin-left 0.3s ease;
 
         }
-
-        @media (max-width: 768px) {
-            
-
-            body,
-            html {
-                margin: 0;
-                padding: 0;
-                height: 100%;
-                width: 100%;
-                overflow-x: hidden;
-                
-            }
-
-            .navebar {
-                position: fixed;
-                top: 0;
-                left: -240px;
-                /* Esconde o menu fora da tela */
-                height: 100vh;
-                width: 240px;
-                transition: transform 0.3s ease;
-            }
-
-            /* Quando o menu estiver ativo, ele aparece */
-            .navebar.active {
-                transform: translateX(240px);
-            }
-
-            main {
-                margin-left: 0;
-                /* Sem margem no conteúdo quando o menu está fechado */
-            }
-
-            /* Mostrar o botão de menu em telas menores */
-            .menu-toggle {
-                display: block;
-                /* Mostrar o botão */
-            }
-
-            .main_videogame {
-                height: 90%;
-                padding: 15px;
-            }
-
-            .main_videogamegrid {
-                grid-template-columns: 1fr 1fr;
-                grid-row-gap: 2em;
-            }
-
+        main::-webkit-scrollbar{
+            height: 0;
+            width: 0;
         }
     </style>
     <script src="https://kit.fontawesome.com/360a0c3340.js" crossorigin="anonymous"></script>
@@ -125,6 +74,9 @@
         <nav>
             <div class="navebar">
                 <ul>
+                    <li>
+                        <img src="https://moradagames.com.br/img_site/logo.png" alt="Moradagames_icon">
+                    </li>
                     <li>
                         <a href="index.html" target="_parent">
                             <div>
@@ -188,29 +140,6 @@
     </header>
 
     <main>
-        <div class="main_navebar">
-            <ul>
-                <li>
-                    <a href=""><img src="https://moradagames.com.br/img_site/logo.png" alt="Moradagames_icon"></a>
-                </li>
-                <li>
-                    <span id="icon_form" class="fa-solid fa-phone"></span>
-                    <span id="title_nav">
-                        <p>(35) 3291-4213</p>
-                    </span>
-
-                </li>
-                <li>
-                    <span id="icon_form" class="fa-solid fa-phone"></span>
-                    <span id="title_nav">
-                        <p>(35) 98855-3750</p>
-                    </span>
-                </li>
-            </ul>
-
-        </div>
-
-
         <div class="main_videogame">
             <h2>Assistência em:</h2>
 
@@ -288,12 +217,6 @@
         
     </main>
 
-    <footer>
-        <div class="encerramento">
-            <p>Feito com intuito academico e estudo</p>
-        </div>
-
-    </footer>
     <script>
         // Selecionar o botão de menu e a navegação
         const menuToggle = document.getElementById('menuToggle');
