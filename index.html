@@ -29,12 +29,12 @@
 
     <style>
         body {
-
+            display: flex;
+            flex-direction: column;
             margin: 0;
             padding: 0;
             height: 100vh;
             width: 100%;
-            position: relative;
             color: #FFFF;
             background: -webkit-linear-gradient(121deg, #6b4433, #622d2e, #54172f, #3d0634, #180238);
             background: linear-gradient(121deg, #6b4433, #622d2e, #54172f, #3d0634, #180238);
@@ -44,7 +44,9 @@
         header {
             display: block;
             position: fixed;
-            height: auto;
+            top: 0;
+            left: 0;
+            height: 120px;
             width: 100vw;
             transition: transform 0.3s ease;
 
@@ -52,12 +54,14 @@
 
         main {
             display: block;
-            padding: 40px;
-            overflow-y: scroll;
-            height: 100%;
-            width: auto;
+            position: fixed;
             box-sizing: border-box;
-
+            overflow-y: scroll;
+            margin-top: 120px;
+            height: calc(100vh - 120px);
+            width: auto;
+            padding: 40px 40px 0px 40px;
+            
         }
         main::-webkit-scrollbar{
             height: 0;
@@ -187,8 +191,8 @@
         <h2 id="title_horario">Horário de Funcionamento</h2>
         <div class="main_funcionamento">
             <div class="main_foto_estabelecimento">
-                <a class="foto" href="https://www.google.com/search?q=morada+gamess&oq=morada+games&gs_lcrp=EgZjaHJvbWUqBggAEEUYOzIGCAAQRRg7MhAIARAuGK8BGMcBGIAEGI4FMgYIAhBFGEAyCAgDEAAYFhgeMggIBBAAGBYYHjIGCAUQRRg8MgYIBhBFGDwyBggHEEUYPdIBCDQzMjVqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8" target="_blank" rel="noopener noreferrer">
-                    <img src="img/20240906_090158.jpg" alt="foto_estabelecimento_moradagames">
+                <a class="foto" href="https://g.co/kgs/PWMAJWy" target="_blank" rel="noopener noreferrer">
+                    <img src="img/logaMoradaGames.jpg" alt="foto_estabelecimento_moradagames">
 
                 </a>
             </div>
@@ -213,8 +217,36 @@
 
         </div>
 
+        <div class="main_footer">
+            <div class="contato">
+                <ul>
+                    <li>
+                        <span>Telefones: (35) 3291-4213 / (35) 98855-3750</span>
+                    </li>
+                    <li>
+                        <span>E-mail: marcelooliveiramoradagames@gmail.com</span>
+                    </li>
+                    <li>
+                        <span>Rua João de Souza Sobrinho, 494 - Vila Betania - Alfenas MG</span>
+                    </li>
+                    
+                </ul>
+            </div>
+            <div class="copyright">
+                <span>CopyRight -2013- www.moradagames.com </span>
 
-        
+            </div>
+            <div class="img_git">
+                <span>
+                    <a href="https://github.com/viniciusozawa" target="_blank" rel="noopener noreferrer"> 
+                        <img src="img/github.png" alt="git_hub_developer">
+                        <span>
+                            Developer: Vinicius
+                        </span>
+                    </a>
+                </span>
+            </div>
+        </div>   
     </main>
 
     <script>
@@ -227,9 +259,6 @@
             navbar.classList.toggle('active'); // Alterna a classe 'active' para mostrar/ocultar o menu
         });
     </script>
-
-
-
 </body>
 
 </html>

@@ -11,6 +11,7 @@
     z-index: 1000;
 }
 
+/* Navebar fixed sem responsividade */
 .navebar{
     display: flex;
     position: fixed;
@@ -65,32 +66,7 @@
     font-size: 1.5vw;
     color: aliceblue;
 }
-
-.main_navebar{
-    margin: 10px 20px;
-    height: 130px;
-    width: auto;
-    margin-bottom: 70px;
-    background-image: url();
-
-}
-
-
-.main_navebar ul{
-    display: flex;
-    flex-direction: row;
-    gap: 40px;
-    align-items: end;
-}
-
-.main_navebar span{
-    display: inline-block;
-    margin-right: 10px;
-    font-size: 24px;
-    padding: 10px;
-    
-}
-
+/* Grid template de console */
 .main_videogame{
     margin-left: 20px;
     margin-right: 20px;
@@ -127,7 +103,16 @@
     background-color: #622d2e;
     text-align: center;
     border-radius: 30px;
+    transition: 1.2s;
     
+}
+
+.main_videogamegrid div:hover{
+    /* Arrumar para deixar mais bonito com uma transição */
+    background: linear-gradient( to bottom , #622d2e , #ffffff);
+    opacity: 1.0;
+    color: black;
+    transform: scale(1.2);
 }
 
 .main_videogamegrid span{
@@ -144,10 +129,11 @@
     
 }
 
+/* divs foto do comercio e horario de funcionamento */
 .main_funcionamento{
     display: grid;
     margin-left: 20px;
-    margin-bottom: 40px;
+    margin-bottom: 70px;
     grid-template-columns: 1fr 2fr;
     grid-column-gap: 1em;
     height: 290px;
@@ -216,5 +202,39 @@
     font-weight: 500;
     font-family: "Montserrat" , serif;
 }
+
+
+.main_footer{
+    display: flex;
+    margin-top: 20px;
+    bottom: 0;
+    padding: 20px 10px 20px 10px;
+    justify-content: space-around;
+    align-items: end;
+    gap: 20px;
+    background-image: linear-gradient(to right bottom, #18181f, #13171c, #101518, #0e1314, #0d1010);
+    color: #ffffff;
+    height: 60px;
+    width: 100%;
+    border-radius: 30px 30px 0px 0px;
+
+}
+
+.main_footer span{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.img_git a{
+    text-decoration: none;
+}
+
+.img_git img{
+    padding-right: 3px;
+    height: 40px;
+    width: 49px;
+}
+
 
 
