@@ -1,31 +1,183 @@
 @media (max-width: 768px) {
-    .navebar {
-        position: fixed;
-        top: 0;
-        left: -240px; /* Esconde o menu fora da tela */
-        height: 100vh;
-        width: 240px;
-        transition: transform 0.3s ease;
-    }
 
-    /* Quando o menu estiver ativo, ele aparece */
-    .navebar.active {
-        transform: translateX(240px);
+    main{
+        
+        width: 100%;
+        max-width: 768px;
+        padding: 0px 0px 0px 0px;
+        justify-items: center;
     }
-
-    main {
-        margin-left: 0; /* Sem margem no conteúdo quando o menu está fechado */
-    }
-
-    /* Mostrar o botão de menu em telas menores */
-    .menu-toggle {
-        display: block; /* Mostrar o botão */
-    }
-
+    .main_videogame{
+        margin: 0;
+        padding: 17px 17px;
+        height: 600px;
+        width: 100vw;
+        border-radius: 40px 90px 40px 90px;
+        background-image: url(https://moradagames.com.br/img_site/bg.jpg);
+        box-shadow: 10px 10px 20px #fff;
     
-    .main_videogamegrid{
-        grid-template-columns: 1fr 1fr;
-        grid-row-gap: 2em;
     }
+    .main_videogame h2{
+        
+        font-weight: 500;
+        font-size: 30px;
+        font-family: "Roboto", sans-serif;
+    }
+    .main_videogamegrid{
+        margin: 30px;
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+        justify-items: center;
+        align-items: center;
+        grid-row-gap: 2em;
+        
+    
+    }
+    
+    .main_videogamegrid div{
+        padding: 20px;
+        height: 100px;
+        width: 110px;
+        border-radius: 30px;
+        background-color: #622d2e;
+        text-align: center;
+        border-radius: 30px;
+        transition: 1.2s;
+        
+    }
+    
+    .main_videogamegrid div:hover{
+        /* Arrumar para deixar mais bonito com uma transição */
+        background: linear-gradient( to bottom , #622d2e , #ffffff);
+        
+        opacity: 1.0;
+        color: black;
+        transform: scale(1.1);
+    }
+    
+    .main_videogamegrid span{
+        display: block;
+        margin-top: 10px;
+        
+    }
+    
+    .main_videogamegrid  span p{
+        font-weight: 500;
+        padding-top: 20px;
+        font-size: 1em;
+        font-family: "Montserrat", serif;
+        
+    }
+    .main_funcionamento{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-column-gap: 2px;
+        height: 500px;
+        margin-bottom: 20px;
+        
+    
+    }
+
+    .main_foto_estabelecimento{
+        padding: 10px 10px;
+    }
+    
+    .main_foto_estabelecimento a{
+        height: 200px;
+        width: 100vw;
+        
+        
+    }
+    
+    .foto {
+        position: relative; 
+        display: inline-block; 
+        transition: filter 0.3s ease;
+        
+    }
+    
+    .foto img {
+        width: 100%; 
+        height: 100%;
+        object-fit: cover; 
+        transition: filter 0.3s ease;
+        border-radius: 20px;
+    }
+    .foto::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0);
+        transition: background 0.3s ease;
+    }
+    .foto:hover img {
+        filter: blur(1px); 
+        cursor: pointer;
+    }
+    .foto:hover::after {
+        background: rgba(0, 0, 0, 0.3); 
+    }
+    .main_descricao{
+        height: 290px;
+        align-content: center;
+        
+    }
+    #title_horario{
+        margin-top: 70px;
+        font-family: "Roboto", sans-serif;
+        font-weight: 700;
+        font-size: 35px;
+        padding-bottom: 10px;
+        text-align: center;
+        margin-bottom: 20px;
+        
+    }
+    
+    .main_descricao li{
+        margin-left: 20px;
+        list-style: circle;
+        padding: 10px;
+        font-size: 16px;
+        font-weight: 500;
+        font-family: "Montserrat" , serif;
+        
+    }
+
+    .main_footer{
+        display: flex;
+        flex-direction: column;
+        top: 100%;
+        bottom: 0;
+        padding: 20px 10px 20px 20px;
+        justify-content: baseline;
+        align-items: baseline;
+        gap: 10px;
+        background-image: linear-gradient(to right bottom, #18181f, #13171c, #101518, #0e1314, #0d1010);
+        color: #ffffff;
+        height: 160px;
+        width: 100%;
+        border-radius: 30px 30px 0px 0px;
+    
+    }
+    
+    .main_footer span{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: 700;
+        font-size: 13px;
+    }
+    
+    .img_git a{
+        text-decoration: none;
+    }
+    
+    .img_git img{
+        padding-right: 3px;
+        height: 40px;
+        width: 49px;
+    }
+    
 
 }

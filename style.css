@@ -1,72 +1,23 @@
-.menu-toggle {
-    display: none; /* Escondido por padrão */
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    font-size: 30px;
-    background-color: transparent;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    z-index: 1000;
-}
+/* Grid template de console */
 
-/* Navebar fixed sem responsividade */
-.navebar{
-    display: flex;
-    position: fixed;
-    height: 120px;
-    width: 100vw;
-    background-color: black;
-    justify-content: flex-end;
-    border-radius: 0px 0px 40px 40px;
-}
-
-#img_icon{
+main {
+    display: block;
+    
+    box-sizing: border-box;
+    overflow-y: scroll;
+    margin-top: 120px;
+    height: calc(100vh - 120px);
     width: auto;
-    height: auto;
-}
-
-.navebar img{
-    padding-right: 20px;
-    height: 90px;
-    width: 150px;
-}
-
-.navebar ul{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 50px;
-    margin-right: 40px;
-}
-.navebar li{
-    display: inline-flex;
-    white-space: nowrap;
-    height: auto;
-    width: auto;
-    list-style: none;
+    padding: 40px 40px 0px 40px;
     
 }
-
-.navebar div{
-    color: #fff;
+main::-webkit-scrollbar{
+    height: 0;
+    width: 0;
 }
-
-.navebar a{
-    text-decoration: none;
+.navebar_cel{
+    display: none;
 }
-
-
-
-.navebar #title_nav{
-    font-family: "Roboto", serif;
-}
-.navebar span{
-    font-size: 1.5vw;
-    color: aliceblue;
-}
-/* Grid template de console */
 .main_videogame{
     margin-left: 20px;
     margin-right: 20px;
